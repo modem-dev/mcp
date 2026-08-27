@@ -29,12 +29,12 @@ Recommended order: pre-flight fixes → official registry → GitHub onboarding 
 | Blocker | Linear | Status |
 | --- | --- | --- |
 | Retire TLS 1.0 workers.dev twin serving `/mcp` | DEV-3881 | ☐ |
-| Tool/server `title`s (server title exists; verify all 11 tools) | DEV-3876 | ☐ verify |
+| Tool/server `title`s (server title + router-tool titles exist in code; verify all 14 tools render titled) | DEV-3876 | ☐ verify |
 | Explicit `destructiveHint` on every tool | DEV-3927 | ☐ |
 | Square logo exports (1:1 SVG, 64×64 PNG <5KB, 400×400 PNG) | DEV-3877 | ☐ |
 | Privacy/ToS/trust links on docs site | DEV-3878 | ☐ |
 | Retention language legal check | DEV-3879 | ☐ |
-| Beta→GA decision + version 1.0.0 | DEV-3880 | ☐ |
+| Beta→GA decision + version 1.0.0 (⚠️ the manifests in this repo already assert `1.0.0` — revisit them if the decision is "stay beta") | DEV-3880 | ☐ |
 | DCR default scope → `data:read`; enforce PKCE | DEV-3882 | ☐ |
 | Bare well-known endpoints + PRM name/docs fields | DEV-3883 | ☐ |
 | **Flip this repo to public** (required by Gemini/Glama/Cline/LobeHub/raw asset URLs) | DEV-3869 | ☐ |

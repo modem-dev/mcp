@@ -18,7 +18,7 @@ Draft answers for the submission portal inside Claude.ai org settings ([DEV-3873
 ## Prerequisites checklist
 
 - [ ] Team/Enterprise Claude.ai org with Owner (Directory) permission for whoever clicks submit (DEV-3919)
-- [ ] Tool `title`s shipped on all 11 tools + server (DEV-3876 — their checklist requires human-readable titles)
+- [ ] Tool `title`s shipped on all 14 tools + server (DEV-3876 — their checklist requires human-readable titles; server + router-tool titles already exist in code, verify the rest)
 - [ ] Square SVG logo exported (DEV-3877)
 - [ ] Privacy policy retention language confirmed (DEV-3879)
 - [ ] Privacy/ToS linked from docs site (DEV-3878)

@@ -6,4 +6,4 @@ Thin plugin wrapping the hosted Modem MCP server (`https://mcp.modem.dev/mcp`) f
 - ⚠️ **Plugin names are immutable once published** — confirm `modem` is the name we want before submitting.
 - Optional follow-up: bundle a skill with Modem usage guidance (tool-selection tips, example prompts).
 
-Before submitting, validate the manifest shape against the current Claude Code plugin docs (`.claude-plugin/plugin.json` + bundled MCP config) — this draft was authored from the readiness report and needs a check against the live schema.
+The manifest shape (incl. the inline `mcpServers` entry with `type: "http"` + `url`) was validated against the published Claude Code plugin manifest schema (schemastore.org). Still worth a `claude plugin validate`-style dry run before submitting.

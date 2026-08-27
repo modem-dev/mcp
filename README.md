@@ -81,6 +81,8 @@ Or in `~/.codex/config.toml`:
 url = "https://mcp.modem.dev/mcp"
 ```
 
+If you edit `config.toml` directly, you still need `codex mcp login modem` to complete OAuth.
+
 ### Gemini CLI
 
 This repo is a Gemini CLI extension (see [`gemini-extension.json`](gemini-extension.json)):

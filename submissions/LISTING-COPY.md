@@ -28,7 +28,7 @@ Canonical copy for every directory submission. Length limits come from the stric
 
 ## Tool inventory note (for reviewer forms)
 
-> 11 tools: 2 gated by `data:read` (read-only, annotated `readOnlyHint: true`), 9 writes + 1 agent invocation gated by `agent:invoke` (annotated `destructiveHint` where applicable). All writes require org membership verified server-side from token claims; the model can never target another organization.
+> 14 tools: 1 gated by `data:read` (`search_modem`, read-only, annotated `readOnlyHint: true`), 13 gated by `agent:invoke` (4 agent-run tools + 9 workspace writes, annotated `destructiveHint` where applicable). All writes require org membership verified server-side from token claims; the model can never target another organization.
 
 ## Auth description (for reviewer forms)
 

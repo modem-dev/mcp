@@ -8,7 +8,7 @@ For the unified ChatGPT + ChatGPT Work + Codex directory ([DEV-3875](https://lin
 
 - [ ] Verify the connector end-to-end as a **developer-mode custom connector** first (DEV-3925) — our transport is POST-only SSE-framed (no GET stream, no sessions); legal per spec but needs live confirmation against their client. Also sanity-check Codex via `codex mcp add`.
 - [ ] Verified business identity + domain-verification challenge (DEV-3926) — identity must match listing name, website, support contact, privacy policy, ToS. Figure out who holds the OpenAI org.
-- [ ] Explicit `destructiveHint` on **every** tool, including `invoke_modem_agent` and `search_modem` (DEV-3927 — `apps/agent-gateway/src/routes/mcp/server.ts`)
+- [ ] Explicit `destructiveHint` on **every** tool, including `modem_agent_invoke` and `search_modem` (DEV-3927 — `apps/agent-gateway/src/routes/mcp/server.ts`)
 - [ ] 64×64 PNG icon under 5KB (DEV-3877)
 - [ ] OAuth demo credentials (same seeded org as the Claude review — DEV-3916/3917)
 - [ ] Demo recording (below)
@@ -19,7 +19,7 @@ For the unified ChatGPT + ChatGPT Work + Codex directory ([DEV-3875](https://lin
 | # | Case | Expected |
 | --- | --- | --- |
 | P1 | Connect via OAuth, then: "What are customers saying about billing in the last month?" | `search_modem` returns markdown results citing seeded topics/messages; no other org's data appears |
-| P2 | "Summarize the three highest-priority open topics and who's affected" | `invoke_modem_agent` returns a summary naming the seeded high-priority topics and companies |
+| P2 | "Summarize the three highest-priority open topics and who's affected" | `modem_agent_invoke` returns a summary naming the seeded high-priority topics and companies |
 | P3 | "Mark the topic about CSV export errors as resolved" | `update_topic` succeeds; change visible in the dashboard demo org |
 | P4 | "Create a company called Acme Robotics with domain acmerobotics.com" | `create_companies` succeeds; company appears in dashboard |
 | P5 | "Merge the duplicate person records for Jane Doe" | `merge_people` merges the two seeded duplicates into one |
