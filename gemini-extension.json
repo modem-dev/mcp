@@ -1,0 +1,10 @@
+{
+    "name": "modem",
+    "version": "1.0.0",
+    "description": "Modem developer CRM — search and act on customer signals from Gemini CLI",
+    "mcpServers": {
+        "modem": {
+            "httpUrl": "https://mcp.modem.dev/mcp"
+        }
+    }
+}

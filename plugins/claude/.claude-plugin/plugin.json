@@ -1,0 +1,20 @@
+{
+    "name": "modem",
+    "description": "The developer CRM, connected to your agent. Search customer signals from chat, issues, and support; update topics, people, and companies.",
+    "version": "1.0.0",
+    "author": {
+        "name": "Modem",
+        "email": "support@modem.dev",
+        "url": "https://modem.dev"
+    },
+    "homepage": "https://docs.modem.dev/api/modem-mcp-server",
+    "repository": "https://github.com/modem-dev/mcp",
+    "license": "SEE LICENSE AT https://modem.dev/terms-of-service",
+    "keywords": ["crm", "customer-feedback", "topics", "sales", "support"],
+    "mcpServers": {
+        "modem": {
+            "type": "http",
+            "url": "https://mcp.modem.dev/mcp"
+        }
+    }
+}

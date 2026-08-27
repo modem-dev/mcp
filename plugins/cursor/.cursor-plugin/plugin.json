@@ -1,0 +1,13 @@
+{
+    "name": "modem",
+    "displayName": "Modem",
+    "version": "1.0.0",
+    "description": "The developer CRM, connected to Cursor. Search customer signals and update topics, people, and companies.",
+    "author": {
+        "name": "Modem",
+        "url": "https://modem.dev"
+    },
+    "keywords": ["crm", "customer-feedback", "topics", "sales", "support"],
+    "license": "SEE LICENSE AT https://modem.dev/terms-of-service",
+    "icon": "./assets/logo.png"
+}

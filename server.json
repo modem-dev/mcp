@@ -1,0 +1,14 @@
+{
+    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+    "name": "dev.modem/modem",
+    "title": "Modem",
+    "description": "Developer-focused CRM: search customer signals from chat, issues, and support, and update topics, people, and companies.",
+    "websiteUrl": "https://modem.dev",
+    "version": "1.0.0",
+    "remotes": [
+        {
+            "type": "streamable-http",
+            "url": "https://mcp.modem.dev/mcp"
+        }
+    ]
+}
