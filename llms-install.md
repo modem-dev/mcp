@@ -34,4 +34,4 @@ Example (Cline / generic `mcpServers` shape):
 - A Modem account (https://modem.dev) with access to the organization to connect
 - An MCP client that supports remote Streamable HTTP servers with OAuth
 
-Full documentation: https://docs.modem.dev/api/modem-mcp-server
+Full documentation: https://modem.dev/docs/api/modem-mcp-server

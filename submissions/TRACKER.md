@@ -10,8 +10,8 @@ Recommended order: pre-flight fixes → official registry → GitHub onboarding 
 | GitHub MCP Registry + VS Code/Copilot gallery | Onboarding request in github-mcp-server discussion #1257 | ☐ Not started | DEV-3871/3886/3887 | Needs registry publish + validator/curl proof first. Manual curation, no SLA. |
 | Claude Connectors Directory | Portal in Claude.ai org settings | ☐ Not started | DEV-3873 (+3916–3922) | See [claude-connectors.md](claude-connectors.md). Needs Team/Enterprise org. |
 | OpenAI Plugin Directory | developers.openai.com/plugins | ☐ **Blocked** (TLS 1.0 twin — DEV-3881) | DEV-3875 (+3925–3928) | See [openai-plugin-directory.md](openai-plugin-directory.md). |
-| Cursor Marketplace | cursor.com/marketplace/publish | ☐ Not started | DEV-3923 | Package in [`../plugins/cursor/`](../plugins/cursor/). |
-| Claude Code plugin | clau.de/plugin-directory-submission | ☐ Not started | DEV-3924 | Package in [`../plugins/claude/`](../plugins/claude/). Name immutable once published. |
+| Cursor Marketplace | cursor.com/marketplace/publish | ☐ Not started | DEV-3923 | Package in [`../plugins/cursor/`](../plugins/cursor/) + root `.cursor-plugin/marketplace.json`. See [plugin-packaging.md](plugin-packaging.md). |
+| Claude Code plugin | claude.ai/admin-settings/directory/submissions/plugins/new (or platform.claude.com/plugins/submit) | ☐ Not started | DEV-3924 | Package in [`../plugins/claude/`](../plugins/claude/) + root `.claude-plugin/marketplace.json`. Name immutable once published. See [plugin-packaging.md](plugin-packaging.md). |
 | Docker MCP Catalog | Fork docker/mcp-registry, `task remote-wizard`, PR | ☐ Not started | DEV-3904 | Don't hand-write server.yaml — the wizard generates it. Resolve license question first. |
 | Gemini CLI extensions | Public repo + `gemini-extension.json` + topic `gemini-cli-extension` | ☐ Waiting on repo going public | DEV-3901 | Crawled daily, no form. Add the GitHub topic when flipping public. |
 | Glama | `glama.json` auto-index + claim listing | ☐ Waiting on repo going public | DEV-3902 | Curated "remote MCP services" list: reach out on their Discord. |
@@ -38,3 +38,5 @@ Recommended order: pre-flight fixes → official registry → GitHub onboarding 
 | DCR default scope → `data:read`; enforce PKCE | DEV-3882 | ☐ |
 | Bare well-known endpoints + PRM name/docs fields | DEV-3883 | ☐ |
 | **Flip this repo to public** (required by Gemini/Glama/Cline/LobeHub/raw asset URLs) | DEV-3869 | ☐ |
+| **Sanitize or relocate `submissions/` before flipping public** — it names an unremediated TLS weakness (DEV-3881), the reviewer login, transport internals, and ~40 private Linear links; `gemini extensions install` also git-clones the whole repo onto every user's machine | (DEV-3869 scope) | ☐ decide |
+| **Add a LICENSE file + SPDX `license` in both plugin manifests** (repo renders as unlicensed once public; MIT/Apache-2.0 for manifests+docs is the norm) | (DEV-3869 scope) | ☐ decide |

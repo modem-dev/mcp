@@ -1,0 +1,14 @@
+{
+    "name": "modem",
+    "owner": {
+        "name": "Modem",
+        "email": "support@modem.dev"
+    },
+    "plugins": [
+        {
+            "name": "modem",
+            "source": "./plugins/cursor",
+            "description": "The developer CRM, connected to Cursor. Search customer signals and update topics, people, and companies."
+        }
+    ]
+}

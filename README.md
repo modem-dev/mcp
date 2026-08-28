@@ -8,7 +8,7 @@ https://mcp.modem.dev/mcp
 
 - **Transport**: Streamable HTTP
 - **Auth**: OAuth 2.1 with Dynamic Client Registration — no API key to create or paste
-- **Docs**: https://docs.modem.dev/api/modem-mcp-server
+- **Docs**: https://modem.dev/docs/api/modem-mcp-server
 
 > This repo holds the public manifests, install docs, and listing assets for the Modem MCP server. The server itself is a hosted service; there is nothing to run from this repo.
 
@@ -90,6 +90,8 @@ This repo is a Gemini CLI extension (see [`gemini-extension.json`](gemini-extens
 ```bash
 gemini extensions install https://github.com/modem-dev/mcp
 ```
+
+Then authorize when prompted on first use (or run `/mcp auth modem` inside Gemini CLI).
 
 ### opencode
 

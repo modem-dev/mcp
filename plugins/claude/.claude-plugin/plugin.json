@@ -7,7 +7,7 @@
         "email": "support@modem.dev",
         "url": "https://modem.dev"
     },
-    "homepage": "https://docs.modem.dev/api/modem-mcp-server",
+    "homepage": "https://modem.dev/docs/api/modem-mcp-server",
     "repository": "https://github.com/modem-dev/mcp",
     "license": "SEE LICENSE AT https://modem.dev/terms-of-service",
     "keywords": ["crm", "customer-feedback", "topics", "sales", "support"],

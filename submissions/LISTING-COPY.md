@@ -1,15 +1,15 @@
 # Shared listing copy
 
-Canonical copy for every directory submission. Length limits come from the strictest reviewer (Claude: tagline ≤55 chars, description 50–100 words). Source: readiness report §5.1.
+Canonical copy for every directory submission. Length limits come from the strictest reviewer (Claude: tagline ≤55 chars, description 50–100 words; official MCP registry: `server.json` description ≤100 **characters** — kept separately in `server.json`). Source: readiness report §5.1.
 
 | Field | Value |
 | --- | --- |
 | **Name** | Modem |
-| **Tagline** (≤55 chars) | "The developer CRM, connected to your AI agent" (46) — alt: "Search and act on customer signals from your agent" (51) |
+| **Tagline** (≤55 chars) | "The developer CRM, connected to your AI agent" (45) — alt: "Search and act on customer signals from your agent" (50) |
 | **Categories** | Productivity · Sales & CRM · Developer tools |
 | **Server URL** | `https://mcp.modem.dev/mcp` (Streamable HTTP, OAuth 2.1 + dynamic client registration) |
 | **Website** | https://modem.dev |
-| **Docs** | https://docs.modem.dev/api/modem-mcp-server |
+| **Docs** | https://modem.dev/docs/api/modem-mcp-server |
 | **Privacy** | https://modem.dev/privacy-policy |
 | **Terms** | https://modem.dev/terms-of-service |
 | **Trust** | https://trust.modem.dev |
@@ -49,7 +49,7 @@ The Slack manifest (`apps/slack/manifest.prod.json` in the monorepo) contains an
 ## awesome-mcp-servers PR line (alphabetical, category: Customer Data / Sales)
 
 ```markdown
-- [Modem](https://docs.modem.dev/api/modem-mcp-server) — Developer-focused CRM: search customer
+- [Modem](https://modem.dev/docs/api/modem-mcp-server) — Developer-focused CRM: search customer
   signals from chat, issues, and support; update topics, people, and companies.
   Remote (Streamable HTTP + OAuth): https://mcp.modem.dev/mcp
 ```
