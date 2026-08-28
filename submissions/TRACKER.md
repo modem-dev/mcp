@@ -39,4 +39,4 @@ Recommended order: pre-flight fixes → official registry → GitHub onboarding 
 | Bare well-known endpoints + PRM name/docs fields | DEV-3883 | ☐ |
 | **Flip this repo to public** (required by Gemini/Glama/Cline/LobeHub/raw asset URLs) | DEV-3869 | ☐ |
 | **Sanitize or relocate `submissions/` before flipping public** — it names an unremediated TLS weakness (DEV-3881), the reviewer login, transport internals, and ~40 private Linear links; `gemini extensions install` also git-clones the whole repo onto every user's machine | (DEV-3869 scope) | ☐ decide |
-| **Add a LICENSE file + SPDX `license` in both plugin manifests** (repo renders as unlicensed once public; MIT/Apache-2.0 for manifests+docs is the norm) | (DEV-3869 scope) | ☐ decide |
+| ~~Add a LICENSE file + SPDX `license` in both plugin manifests~~ | (DEV-3869 scope) | ✅ MIT, Modem Labs Inc. |

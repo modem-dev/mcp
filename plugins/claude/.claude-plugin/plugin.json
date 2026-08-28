@@ -9,7 +9,7 @@
     },
     "homepage": "https://modem.dev/docs/api/modem-mcp-server",
     "repository": "https://github.com/modem-dev/mcp",
-    "license": "SEE LICENSE AT https://modem.dev/terms-of-service",
+    "license": "MIT",
     "keywords": ["crm", "customer-feedback", "topics", "sales", "support"],
     "mcpServers": {
         "modem": {

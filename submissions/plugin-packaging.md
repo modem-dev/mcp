@@ -19,6 +19,6 @@ Internal notes moved out of `plugins/*/README.md` (those are user-facing — rev
 - Run `scripts/validate-template.mjs` from their template against this repo.
 - Submit via cursor.com/marketplace/publish (human-reviewed).
 
-## Open questions (both)
+## License
 
-- `license` fields currently use npm's `"SEE LICENSE AT <url>"` convention; both schemas describe SPDX identifiers. Decide a real license for this repo's contents (MIT/Apache-2.0 for manifests+docs is the norm — it licenses the JSON, not the service) and add a `LICENSE` file; GitHub shows the repo as unlicensed otherwise.
+Resolved: repo-root `LICENSE` is MIT (Copyright Modem Labs Inc.) and both plugin manifests declare `"license": "MIT"`. It licenses the manifests/docs in this repo, not the hosted service (that stays under the ToS).
