@@ -140,4 +140,4 @@ Questions or issues: [support@modem.dev](mailto:support@modem.dev)
 
 ---
 
-**For the Modem team**: submission copy, portal answers, test cases, and the per-directory tracker live in [`submissions/`](submissions/). Plugin packages for Cursor and Claude Code live in [`plugins/`](plugins/).
+Plugin packages for Cursor and Claude Code live in [`plugins/`](plugins/).
