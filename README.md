@@ -1,6 +1,6 @@
 # Modem MCP Server
 
-Connect the [Modem](https://modem.dev) developer CRM to any MCP-compatible client — search customer signals from chat, issue trackers, and support inboxes, run the Modem Agent, and update topics, people, and companies directly from your assistant.
+Connect [Modem](https://modem.dev) to any MCP-compatible client. Modem builds a custom context graph of your customers and product, grouping disparate data from chat, issue trackers, and support inboxes into topics, people, and companies. From your assistant you can search that graph, run the Modem Agent, and update your workspace directly.
 
 ```text
 https://mcp.modem.dev/mcp
