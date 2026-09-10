@@ -1,5 +1,6 @@
 {
     "name": "modem",
+    "description": "The Modem developer CRM for your agent: search customer signals from chat, issues, and support; update topics, people, and companies.",
     "owner": {
         "name": "Modem",
         "email": "support@modem.dev",

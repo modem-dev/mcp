@@ -4,7 +4,9 @@ Connects Cursor to [Modem](https://modem.dev), the developer CRM — search cust
 
 ## Install
 
-Install from the Cursor Marketplace, or add the remote server directly (**Settings** → **Tools & MCP**) with URL `https://mcp.modem.dev/mcp`.
+[![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/install-mcp?name=modem&config=eyJ1cmwiOiJodHRwczovL21jcC5tb2RlbS5kZXYvbWNwIn0%3D)
+
+One click with the button above (Cursor 3.15.12 or newer), install from the Cursor Marketplace, or add the remote server directly (**Settings** → **Tools & MCP**) with URL `https://mcp.modem.dev/mcp`.
 
 The first tool use opens a browser window to authorize with your Modem account (OAuth — no API key). Select your organization and approve the permissions on the consent screen.
 

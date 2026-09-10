@@ -36,7 +36,9 @@ Then run `/mcp` inside Claude Code and complete the browser authorization flow.
 
 ### Cursor
 
-**Settings** → **Cursor Settings** → **Tools & MCP** → add a new MCP server, or add to `mcp.json`:
+[![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/install-mcp?name=modem&config=eyJ1cmwiOiJodHRwczovL21jcC5tb2RlbS5kZXYvbWNwIn0%3D)
+
+Or **Settings** → **Cursor Settings** → **Tools & MCP** → add a new MCP server, or add to `mcp.json`:
 
 ```json
 {
