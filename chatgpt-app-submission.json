@@ -1,0 +1,248 @@
+{
+    "$schema": "https://developers.openai.com/apps-sdk/schemas/chatgpt-app-submission.v1.json",
+    "schema_version": 1,
+    "app_info": {
+        "display_name": "Modem",
+        "subtitle": "Search and triage feedback",
+        "description": "Modem groups customer feedback from chat, issue trackers, and support inboxes into topics, people, and companies. From ChatGPT you can search that graph in natural language (\"What are customers saying about billing this month?\"), run the Modem Agent, and update your workspace directly: reprioritize topics, merge duplicate companies or people, and keep customer records current. Connecting uses OAuth; search (data:read) and agent/write access (agent:invoke) are granted separately, and write tools act under your existing role in the Modem organization you authorize. Requires a Modem account.",
+        "category": "BUSINESS"
+    },
+    "tools": {
+        "search_modem": {
+            "annotations": {
+                "readOnlyHint": true,
+                "openWorldHint": false,
+                "destructiveHint": false
+            },
+            "justifications": {
+                "read_only_justification": "Runs a natural-language search over topics, messages, people, and companies in the authorized Modem workspace and returns results without modifying any records.",
+                "open_world_justification": "Queries only the Modem workspace the OAuth token is scoped to; it does not reach arbitrary external systems.",
+                "destructive_justification": "The tool only reads and returns workspace data; no state is created, changed, or deleted."
+            }
+        },
+        "modem_agent_invoke": {
+            "annotations": {
+                "readOnlyHint": false,
+                "openWorldHint": false,
+                "destructiveHint": true
+            },
+            "justifications": {
+                "read_only_justification": "Starts a Modem Agent run that can act on the workspace, including making changes to topics, people, and companies.",
+                "open_world_justification": "The agent operates within the authorized Modem organization resolved from token claims, not arbitrary external endpoints.",
+                "destructive_justification": "Agent runs can update or merge existing workspace records, so the effects can overwrite prior state."
+            }
+        },
+        "modem_agent_get_run": {
+            "annotations": {
+                "readOnlyHint": true,
+                "openWorldHint": false,
+                "destructiveHint": false
+            },
+            "justifications": {
+                "read_only_justification": "Fetches the status and output of an existing Modem Agent run without changing it.",
+                "open_world_justification": "Reads run state from the authorized Modem workspace only.",
+                "destructive_justification": "Retrieving a run's state does not modify any data."
+            }
+        },
+        "modem_agent_send_message": {
+            "annotations": {
+                "readOnlyHint": false,
+                "openWorldHint": false,
+                "destructiveHint": false
+            },
+            "justifications": {
+                "read_only_justification": "Appends a user message to an in-progress Modem Agent run, which changes the run's conversation state.",
+                "open_world_justification": "Messages go only to an agent run inside the authorized Modem workspace.",
+                "destructive_justification": "Adding a message is additive; it does not overwrite or delete existing data."
+            }
+        },
+        "modem_agent_cancel_run": {
+            "annotations": {
+                "readOnlyHint": false,
+                "openWorldHint": false,
+                "destructiveHint": false
+            },
+            "justifications": {
+                "read_only_justification": "Stops an in-progress Modem Agent run, changing its state to cancelled.",
+                "open_world_justification": "Acts only on a run inside the authorized Modem workspace.",
+                "destructive_justification": "Cancelling halts further changes and does not delete existing workspace records."
+            }
+        },
+        "update_topic": {
+            "annotations": {
+                "readOnlyHint": false,
+                "openWorldHint": false,
+                "destructiveHint": true
+            },
+            "justifications": {
+                "read_only_justification": "Writes changes to a topic's fields (such as priority or status) in the Modem workspace.",
+                "open_world_justification": "Modifies only records in the authorized Modem organization.",
+                "destructive_justification": "Updating a topic overwrites its previous field values."
+            }
+        },
+        "bulk_update_topics": {
+            "annotations": {
+                "readOnlyHint": false,
+                "openWorldHint": false,
+                "destructiveHint": true
+            },
+            "justifications": {
+                "read_only_justification": "Applies field changes across multiple topics in one call.",
+                "open_world_justification": "Modifies only records in the authorized Modem organization.",
+                "destructive_justification": "Bulk updates overwrite prior values on every affected topic."
+            }
+        },
+        "merge_topics": {
+            "annotations": {
+                "readOnlyHint": false,
+                "openWorldHint": false,
+                "destructiveHint": true
+            },
+            "justifications": {
+                "read_only_justification": "Combines duplicate topics into one surviving topic.",
+                "open_world_justification": "Modifies only records in the authorized Modem organization.",
+                "destructive_justification": "Merging collapses the source topics into the target; the merged-away topics no longer exist separately."
+            }
+        },
+        "create_companies": {
+            "annotations": {
+                "readOnlyHint": false,
+                "openWorldHint": false,
+                "destructiveHint": true
+            },
+            "justifications": {
+                "read_only_justification": "Creates new company records in the Modem workspace.",
+                "open_world_justification": "Creates records only in the authorized Modem organization.",
+                "destructive_justification": "Annotated destructive server-side like all Modem write tools so clients confirm each call, although creation itself is additive."
+            }
+        },
+        "update_companies": {
+            "annotations": {
+                "readOnlyHint": false,
+                "openWorldHint": false,
+                "destructiveHint": true
+            },
+            "justifications": {
+                "read_only_justification": "Writes changes to existing company records.",
+                "open_world_justification": "Modifies only records in the authorized Modem organization.",
+                "destructive_justification": "Updates overwrite previous company field values."
+            }
+        },
+        "merge_companies": {
+            "annotations": {
+                "readOnlyHint": false,
+                "openWorldHint": false,
+                "destructiveHint": true
+            },
+            "justifications": {
+                "read_only_justification": "Combines duplicate company records into one surviving company.",
+                "open_world_justification": "Modifies only records in the authorized Modem organization.",
+                "destructive_justification": "Merging collapses source companies into the target; merged-away records no longer exist separately."
+            }
+        },
+        "add_people_to_company": {
+            "annotations": {
+                "readOnlyHint": false,
+                "openWorldHint": false,
+                "destructiveHint": true
+            },
+            "justifications": {
+                "read_only_justification": "Writes an association between people and a company in the workspace.",
+                "open_world_justification": "Modifies only records in the authorized Modem organization.",
+                "destructive_justification": "Annotated destructive server-side like all Modem write tools so clients confirm each call; changing a person's company affiliation alters existing records."
+            }
+        },
+        "update_people": {
+            "annotations": {
+                "readOnlyHint": false,
+                "openWorldHint": false,
+                "destructiveHint": true
+            },
+            "justifications": {
+                "read_only_justification": "Writes changes to existing person records.",
+                "open_world_justification": "Modifies only records in the authorized Modem organization.",
+                "destructive_justification": "Updates overwrite previous person field values."
+            }
+        },
+        "merge_people": {
+            "annotations": {
+                "readOnlyHint": false,
+                "openWorldHint": false,
+                "destructiveHint": true
+            },
+            "justifications": {
+                "read_only_justification": "Combines duplicate person records into one surviving person.",
+                "open_world_justification": "Modifies only records in the authorized Modem organization.",
+                "destructive_justification": "Merging collapses source people into the target; merged-away records no longer exist separately."
+            }
+        }
+    },
+    "test_cases": [
+        {
+            "description": "Natural-language search over recent customer feedback",
+            "user_prompt": "What are customers saying about billing in the last month?",
+            "file_attachment_urls": null,
+            "tools_triggered": ["search_modem"],
+            "expected_output": "A summary of billing-related topics and messages from the connected Modem workspace, citing the topics, people, and companies involved.",
+            "expected_output_url": null
+        },
+        {
+            "description": "Prioritized digest of open topics",
+            "user_prompt": "Summarize the three highest-priority open topics and who's affected.",
+            "file_attachment_urls": null,
+            "tools_triggered": ["search_modem"],
+            "expected_output": "Three open topics ranked by priority, each with a short summary and the affected people and companies.",
+            "expected_output_url": null
+        },
+        {
+            "description": "Update a topic's priority (write, confirmed by the client)",
+            "user_prompt": "Mark the topic about SSO login failures as high priority in Modem.",
+            "file_attachment_urls": null,
+            "tools_triggered": ["search_modem", "update_topic"],
+            "expected_output": "The SSO login failures topic is located, the user confirms the destructive write, and the topic's priority is set to high with a confirmation of the change.",
+            "expected_output_url": null
+        },
+        {
+            "description": "Find and merge duplicate company records",
+            "user_prompt": "Find the duplicate Acme companies in Modem and merge them into the one with the acme.com domain.",
+            "file_attachment_urls": null,
+            "tools_triggered": ["search_modem", "merge_companies"],
+            "expected_output": "Duplicate Acme company records are identified, the user confirms the merge, and the duplicates are merged into the company with the acme.com domain.",
+            "expected_output_url": null
+        },
+        {
+            "description": "Run the Modem Agent and report its result",
+            "user_prompt": "Have the Modem Agent triage this week's new customer feedback, then tell me what it did.",
+            "file_attachment_urls": null,
+            "tools_triggered": ["modem_agent_invoke", "modem_agent_get_run"],
+            "expected_output": "A Modem Agent run is started, its progress is polled, and the user gets a summary of the triage actions the agent took.",
+            "expected_output_url": null
+        }
+    ],
+    "negative_test_cases": [
+        {
+            "description": "General coding help unrelated to customer data",
+            "user_prompt": "Write a Python function that reverses a linked list.",
+            "file_attachment_urls": null,
+            "tools_triggered": [],
+            "expected_output": "ChatGPT answers directly without invoking any Modem tools, since the request has nothing to do with the user's customer feedback or workspace.",
+            "expected_output_url": null
+        },
+        {
+            "description": "General knowledge question",
+            "user_prompt": "What's the weather like in Toronto this weekend?",
+            "file_attachment_urls": null,
+            "tools_triggered": [],
+            "expected_output": "ChatGPT answers (or uses a weather-appropriate capability) without invoking Modem, which holds no weather data.",
+            "expected_output_url": null
+        },
+        {
+            "description": "Feedback about ChatGPT itself, not the user's customers",
+            "user_prompt": "I don't like how long your answers are. Be more concise.",
+            "file_attachment_urls": null,
+            "tools_triggered": [],
+            "expected_output": "ChatGPT adjusts its own behavior without searching or writing to the Modem workspace; \"feedback\" here is not customer feedback data.",
+            "expected_output_url": null
+        }
+    ]
+}
