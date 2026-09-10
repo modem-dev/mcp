@@ -182,7 +182,7 @@
             "description": "Natural-language search over recent customer feedback",
             "user_prompt": "What are customers saying about billing in the last month?",
             "file_attachment_urls": null,
-            "tools_triggered": ["search_modem"],
+            "tools_triggered": "search_modem",
             "expected_output": "A summary of billing-related topics and messages from the connected Modem workspace, citing the topics, people, and companies involved.",
             "expected_output_url": null
         },
@@ -190,7 +190,7 @@
             "description": "Prioritized digest of open topics",
             "user_prompt": "Summarize the three highest-priority open topics and who's affected.",
             "file_attachment_urls": null,
-            "tools_triggered": ["search_modem"],
+            "tools_triggered": "search_modem",
             "expected_output": "Three open topics ranked by priority, each with a short summary and the affected people and companies.",
             "expected_output_url": null
         },
@@ -198,7 +198,7 @@
             "description": "Update a topic's priority (write, confirmed by the client)",
             "user_prompt": "Mark the topic about SSO login failures as high priority in Modem.",
             "file_attachment_urls": null,
-            "tools_triggered": ["search_modem", "update_topic"],
+            "tools_triggered": "update_topic",
             "expected_output": "The SSO login failures topic is located, the user confirms the destructive write, and the topic's priority is set to high with a confirmation of the change.",
             "expected_output_url": null
         },
@@ -206,7 +206,7 @@
             "description": "Find and merge duplicate company records",
             "user_prompt": "Find the duplicate Acme companies in Modem and merge them into the one with the acme.com domain.",
             "file_attachment_urls": null,
-            "tools_triggered": ["search_modem", "merge_companies"],
+            "tools_triggered": "merge_companies",
             "expected_output": "Duplicate Acme company records are identified, the user confirms the merge, and the duplicates are merged into the company with the acme.com domain.",
             "expected_output_url": null
         },
@@ -214,7 +214,7 @@
             "description": "Run the Modem Agent and report its result",
             "user_prompt": "Have the Modem Agent triage this week's new customer feedback, then tell me what it did.",
             "file_attachment_urls": null,
-            "tools_triggered": ["modem_agent_invoke", "modem_agent_get_run"],
+            "tools_triggered": "modem_agent_invoke",
             "expected_output": "A Modem Agent run is started, its progress is polled, and the user gets a summary of the triage actions the agent took.",
             "expected_output_url": null
         }
@@ -224,7 +224,7 @@
             "description": "General coding help unrelated to customer data",
             "user_prompt": "Write a Python function that reverses a linked list.",
             "file_attachment_urls": null,
-            "tools_triggered": [],
+            "tools_triggered": null,
             "expected_output": "ChatGPT answers directly without invoking any Modem tools, since the request has nothing to do with the user's customer feedback or workspace.",
             "expected_output_url": null
         },
@@ -232,7 +232,7 @@
             "description": "General knowledge question",
             "user_prompt": "What's the weather like in Toronto this weekend?",
             "file_attachment_urls": null,
-            "tools_triggered": [],
+            "tools_triggered": null,
             "expected_output": "ChatGPT answers (or uses a weather-appropriate capability) without invoking Modem, which holds no weather data.",
             "expected_output_url": null
         },
@@ -240,7 +240,7 @@
             "description": "Feedback about ChatGPT itself, not the user's customers",
             "user_prompt": "I don't like how long your answers are. Be more concise.",
             "file_attachment_urls": null,
-            "tools_triggered": [],
+            "tools_triggered": null,
             "expected_output": "ChatGPT adjusts its own behavior without searching or writing to the Modem workspace; \"feedback\" here is not customer feedback data.",
             "expected_output_url": null
         }
