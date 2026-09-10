@@ -8,7 +8,20 @@
         "email": "support@modem.dev"
     },
     "homepage": "https://modem.dev",
-    "keywords": ["crm", "customer-feedback", "topics", "sales", "support"],
+    "keywords": [
+        "crm",
+        "customer-feedback",
+        "topics",
+        "sales",
+        "support"
+    ],
+    "category": "Productivity",
+    "tags": [
+        "crm",
+        "customer-feedback",
+        "sales",
+        "support"
+    ],
     "license": "MIT",
     "logo": "assets/logo.png",
     "mcpServers": "./mcp.json"
