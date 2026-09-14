@@ -8,6 +8,7 @@
         "email": "support@modem.dev"
     },
     "homepage": "https://modem.dev",
+    "repository": "https://github.com/modem-dev/mcp",
     "keywords": [
         "crm",
         "customer-feedback",
