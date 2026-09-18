@@ -8,7 +8,7 @@
         {
             "name": "modem",
             "source": "./plugins/cursor",
-            "description": "The developer CRM, connected to Cursor. Search customer signals and update topics, people, and companies."
+            "description": "Turn customer feedback into action from Cursor. Modem connects customer conversations to your team’s work. Use the Modem Agent to triage bugs, create Linear issues, coordinate updates in Slack, and delegate fixes to coding agents with customer context. Build reusable skills and set up automations for weekly digests, priority alerts, and release updates."
         }
     ]
 }
