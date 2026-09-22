@@ -81,9 +81,10 @@ Or in `~/.codex/config.toml`:
 ```toml
 [mcp_servers.modem]
 url = "https://mcp.modem.dev/mcp"
+auth = "oauth"
 ```
 
-If you edit `config.toml` directly, you still need `codex mcp login modem` to complete OAuth.
+`auth` defaults to `oauth`, so it can be omitted. If you edit `config.toml` directly, you still need `codex mcp login modem` to complete OAuth.
 
 ### Gemini CLI
 
@@ -112,6 +113,18 @@ In `opencode.json`:
 ```
 
 Then `opencode mcp auth modem` (or authorize when prompted on first use).
+
+### ChatGPT
+
+ChatGPT connects to remote MCP servers through **Developer mode**, available on paid plans. Depending on your ChatGPT version the setting lives under **Settings** → **Security and login**, or under **Apps** (previously **Connectors**) → **Advanced settings**.
+
+1. Enable **Developer mode**.
+2. In the apps/connectors list, click the add (**+**) button to create a new connection.
+3. Give it a name such as `Modem` and enter the server URL `https://mcp.modem.dev/mcp`.
+4. If asked for an authentication type, choose **OAuth**. Create the connection.
+5. Complete the Modem authorization flow in the browser window that opens, then review the discovered tools.
+
+In a conversation, enable the Modem connection from the composer's tools menu. ChatGPT asks for confirmation before running write tools.
 
 ### Any other MCP client
 
