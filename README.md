@@ -54,7 +54,7 @@ If Cursor asks for a transport type, choose **Streamable HTTP**.
 
 ### Grok Build and Grok chat
 
-The Grok Build package is under [`plugins/grok`](plugins/grok/README.md), with local install and verification steps. [Source PR #8](https://github.com/modem-dev/mcp/pull/8) and [xAI marketplace PR #907](https://github.com/xai-org/plugin-marketplace/pull/907) are open for review. Native Build authentication and search testing remain pending with a Modem-controlled xAI account.
+The Grok Build package is under [`plugins/grok`](plugins/grok/README.md), with local install and verification steps. [Source PR #8](https://github.com/modem-dev/mcp/pull/8) and [xAI marketplace PR #907](https://github.com/xai-org/plugin-marketplace/pull/907) are open for review. Native Build OAuth, tool discovery, and one read-only search passed a smoke test with Grok Build 1.0.41 on September 24, 2026.
 
 For Grok chat, add a Custom connector at [grok.com/connectors](https://grok.com/connectors) using `https://mcp.modem.dev/mcp` and complete authentication. OAuth and a read-only search passed in a demo test on September 24, 2026. Availability inside Grok on X remains unconfirmed. See [Grok submission notes](docs/grok-submission.md) for the separate Build, chat, Bot, and X distribution paths.
 

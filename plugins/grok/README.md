@@ -8,8 +8,8 @@ This package configures Modem's hosted MCP server. It needs a Modem account and 
 
 - Manifest validation, isolated local installation, and plugin-origin discovery passed with Grok Build 1.0.41.
 - [Source PR #8](https://github.com/modem-dev/mcp/pull/8) and [xAI marketplace PR #907](https://github.com/xai-org/plugin-marketplace/pull/907) are open for review; marketplace acceptance remains pending.
-- Native Grok Build authentication and read-only search testing remain pending with a Modem-controlled xAI account.
-- Grok chat OAuth and a read-only search passed in a demo test on September 24, 2026. That test does not establish native Build compatibility. Availability inside Grok on X remains unconfirmed; see [submission notes](../../docs/grok-submission.md) for the separate distribution paths.
+- Native Grok Build OAuth, tool discovery, and one read-only search passed a smoke test with Grok Build 1.0.41 on September 24, 2026. Test coverage is limited to that flow.
+- Grok chat OAuth and a read-only search passed a separate demo test on September 24, 2026. Availability inside Grok on X remains unconfirmed; see [submission notes](../../docs/grok-submission.md) for the separate distribution paths.
 
 ## Test this checkout
 
@@ -23,7 +23,7 @@ grok mcp doctor modem
 ```
 
 - Check `grok inspect` for the Modem server's origin. An existing direct MCP configuration or Claude-compatible plugin must not mask a failed package install.
-- Open Grok Build and use `/mcps` to authenticate Modem if needed. Grok documents a browser OAuth flow on first use; select the intended Modem organization and review the requested scopes.
+- Open Grok Build, run `/mcps`, select Modem, and press `i` to authenticate if needed. Complete the browser OAuth flow, selecting the intended Modem organization and reviewing the requested scopes. Return to `/mcps` and verify Modem is ready with tools available. Before this step, `grok mcp doctor modem` may report that authentication is required.
 - Ask: **Search Modem for customer feedback about file uploads. Include supporting sources. Do not change any data.** Verify it calls `search_modem`, not an agent run.
 - Record the Grok version, package version, discovered server, OAuth result, and search result. Keep credentials and customer records out of this public repository.
 
