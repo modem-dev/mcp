@@ -1,0 +1,22 @@
+{
+    "name": "modem",
+    "owner": {
+        "name": "Modem",
+        "email": "support@modem.dev",
+        "url": "https://modem.dev"
+    },
+    "plugins": [
+        {
+            "name": "modem",
+            "description": "Search customer feedback in Modem, update topics, people, and companies, and run the Modem Agent from Grok Build.",
+            "category": "productivity",
+            "source": {
+                "type": "local",
+                "path": "./plugins/grok"
+            },
+            "homepage": "https://modem.dev",
+            "keywords": ["modem", "modem mcp", "modem crm"],
+            "domains": ["modem.dev"]
+        }
+    ]
+}

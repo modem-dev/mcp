@@ -52,6 +52,12 @@ Or **Settings** → **Cursor Settings** → **Tools & MCP** → add a new MCP se
 
 If Cursor asks for a transport type, choose **Streamable HTTP**.
 
+### Grok Build and Grok chat
+
+The Grok Build package is under [`plugins/grok`](plugins/grok/README.md), with local install and verification steps. Official marketplace submission is pending.
+
+For Grok chat, add a Custom connector at [grok.com/connectors](https://grok.com/connectors) using `https://mcp.modem.dev/mcp` and complete authentication. Authenticated compatibility testing is still pending. See [Grok submission notes](docs/grok-submission.md) for the separate Build, chat, Bot, and X distribution paths.
+
 ### VS Code / GitHub Copilot
 
 In your user profile `mcp.json` or workspace `.vscode/mcp.json`:
@@ -142,4 +148,4 @@ Questions or issues: [support@modem.dev](mailto:support@modem.dev)
 
 ---
 
-Plugin packages for Cursor and Claude Code live in [`plugins/`](plugins/).
+Plugin packages for Cursor, Claude Code, and Grok Build live in [`plugins/`](plugins/).

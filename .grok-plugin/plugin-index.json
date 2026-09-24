@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "plugins": {
+    "modem": {
+      "version": "0.1.0",
+      "components": {
+        "mcpServers": [
+          {
+            "name": "modem",
+            "description": "http"
+          }
+        ]
+      }
+    }
+  }
+}
