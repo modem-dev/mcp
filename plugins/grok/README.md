@@ -7,8 +7,9 @@ This package configures Modem's hosted MCP server. It needs a Modem account and 
 ## Status
 
 - Manifest validation, isolated local installation, and plugin-origin discovery passed with Grok Build 1.0.41.
-- Authenticated Grok Build testing and xAI marketplace submission are still pending.
-- This package targets Grok Build. Grok chat, Grok Bot, and Grok inside X have separate distribution paths; see [submission notes](../../docs/grok-submission.md).
+- [Source PR #8](https://github.com/modem-dev/mcp/pull/8) and [xAI marketplace PR #907](https://github.com/xai-org/plugin-marketplace/pull/907) are open for review; marketplace acceptance remains pending.
+- Native Grok Build authentication and read-only search testing remain pending with a Modem-controlled xAI account.
+- Grok chat OAuth and a read-only search passed in a demo test on September 24, 2026. That test does not establish native Build compatibility. Availability inside Grok on X remains unconfirmed; see [submission notes](../../docs/grok-submission.md) for the separate distribution paths.
 
 ## Test this checkout
 
