@@ -1,0 +1,14 @@
+{
+    "name": "modem",
+    "version": "0.1.0",
+    "description": "Search customer feedback in Modem, update topics, people, and companies, and run the Modem Agent from Grok Build.",
+    "author": {
+        "name": "Modem",
+        "email": "support@modem.dev",
+        "url": "https://modem.dev"
+    },
+    "homepage": "https://modem.dev/docs/api/modem-mcp-server",
+    "repository": "https://github.com/modem-dev/mcp",
+    "license": "MIT",
+    "keywords": ["modem", "modem mcp", "modem crm"]
+}

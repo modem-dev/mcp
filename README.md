@@ -52,6 +52,12 @@ Or **Settings** → **Cursor Settings** → **Tools & MCP** → add a new MCP se
 
 If Cursor asks for a transport type, choose **Streamable HTTP**.
 
+### Grok Build and Grok chat
+
+The Grok Build package is under [`plugins/grok`](plugins/grok/README.md), with local install and verification steps. [Source PR #8](https://github.com/modem-dev/mcp/pull/8) and [xAI marketplace PR #907](https://github.com/xai-org/plugin-marketplace/pull/907) are open for review. Native Build OAuth, tool discovery, and one read-only search passed a smoke test with Grok Build 1.0.41 on September 24, 2026.
+
+For Grok chat, add a Custom connector at [grok.com/connectors](https://grok.com/connectors) using `https://mcp.modem.dev/mcp` and complete authentication. OAuth and a read-only search passed in a demo test on September 24, 2026. Availability inside Grok on X remains unconfirmed. See [Grok submission notes](docs/grok-submission.md) for the separate Build, chat, Bot, and X distribution paths.
+
 ### VS Code / GitHub Copilot
 
 In your user profile `mcp.json` or workspace `.vscode/mcp.json`:
@@ -155,4 +161,4 @@ Questions or issues: [support@modem.dev](mailto:support@modem.dev)
 
 ---
 
-Plugin packages for Cursor and Claude Code live in [`plugins/`](plugins/).
+Plugin packages for Cursor, Claude Code, and Grok Build live in [`plugins/`](plugins/).
