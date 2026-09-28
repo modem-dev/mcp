@@ -1,8 +1,8 @@
 {
     "name": "modem",
     "displayName": "Modem",
-    "version": "1.0.0",
-    "description": "The developer CRM, connected to Cursor. Search customer signals and update topics, people, and companies.",
+    "version": "1.1.0",
+    "description": "See which customers reported the bug or asked for the feature you're working on. Modem searches feedback from chat, support, and issue trackers, and marks topics completed when your fix ships.",
     "author": {
         "name": "Modem",
         "email": "support@modem.dev"
@@ -13,7 +13,8 @@
         "customer-feedback",
         "topics",
         "sales",
-        "support"
+        "support",
+        "canvas"
     ],
     "category": "Productivity",
     "tags": [
@@ -23,6 +24,7 @@
         "support"
     ],
     "license": "MIT",
-    "logo": "assets/logo.png",
-    "mcpServers": "./mcp.json"
+    "logo": "assets/logo.svg",
+    "mcpServers": "./mcp.json",
+    "repository": "https://github.com/modem-dev/mcp"
 }

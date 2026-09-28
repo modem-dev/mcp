@@ -1,0 +1,10 @@
+---
+description: Check Modem for customer reports and linked work before changing user-facing behavior, and when a task mentions a customer, company, or support ticket
+alwaysApply: false
+---
+Modem connects this workspace to the organization's customer conversations from chat, support inboxes, and issue trackers, grouped into topics, companies, and people. Topics link to the Linear issues and pull requests that resolve them.
+
+- Before fixing a bug or building a feature that users will notice, call `search_modem` to find matching topics and the customers who raised them. Follow the `customer-context` skill.
+- When a task names a customer or company, look them up in Modem before assuming what they need.
+- Put affected customers and topic names in PR descriptions when Modem returns them.
+- `search_modem` is read-only and free to call. Every other Modem tool writes to the organization, so only call a write tool when the user asks for that change.

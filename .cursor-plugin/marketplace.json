@@ -8,7 +8,7 @@
         {
             "name": "modem",
             "source": "./plugins/cursor",
-            "description": "The developer CRM, connected to Cursor. Search customer signals and update topics, people, and companies."
+            "description": "See which customers reported the bug or asked for the feature you're working on. Modem searches feedback from chat, support, and issue trackers, and marks topics completed when your fix ships."
         }
     ]
 }
