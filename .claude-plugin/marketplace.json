@@ -10,7 +10,7 @@
         {
             "name": "modem",
             "source": "./plugins/claude",
-            "description": "The developer CRM, connected to your agent. Search customer signals from chat, issues, and support; update topics, people, and companies."
+            "description": "Search customer signals, update your Modem workspace, and help add in-app feedback to your product."
         }
     ]
 }

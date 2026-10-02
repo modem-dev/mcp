@@ -1,7 +1,7 @@
 {
     "name": "modem",
-    "description": "The developer CRM, connected to your agent. Search customer signals from chat, issues, and support; update topics, people, and companies.",
-    "version": "1.0.0",
+    "description": "Search customer signals, update your Modem workspace, and help add in-app feedback to your product.",
+    "version": "1.1.0",
     "author": {
         "name": "Modem",
         "email": "support@modem.dev",
@@ -10,11 +10,11 @@
     "homepage": "https://modem.dev/docs/api/modem-mcp-server",
     "repository": "https://github.com/modem-dev/mcp",
     "license": "MIT",
-    "keywords": ["crm", "customer-feedback", "topics", "sales", "support"],
-    "mcpServers": {
-        "modem": {
-            "type": "http",
-            "url": "https://mcp.modem.dev/mcp"
-        }
-    }
+    "keywords": [
+        "crm",
+        "customer-feedback",
+        "topics",
+        "sales",
+        "support"
+    ]
 }

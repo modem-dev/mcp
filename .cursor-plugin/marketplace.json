@@ -8,7 +8,7 @@
         {
             "name": "modem",
             "source": "./plugins/cursor",
-            "description": "The developer CRM, connected to Cursor. Search customer signals and update topics, people, and companies."
+            "description": "Search customer signals, update your Modem workspace, and help add in-app feedback to your product."
         }
     ]
 }

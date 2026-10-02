@@ -141,6 +141,26 @@ In a conversation, enable the Modem connection from the composer's tools menu. C
 | Transport | Streamable HTTP (or "HTTP") |
 | Authentication | OAuth |
 
+## Add in-app feedback
+
+The Cursor and Claude plugin packages include the native `install-feedback` skill.
+Ask your coding agent:
+
+> Add in-app feedback to this app with Modem. Use the installed Modem skill if available, or ask `modem_skills` for `install-feedback`. If Modem is not connected, help me connect it and then continue. If I have not named a feedback surface, offer a few choices and recommend one after inspecting the app.
+
+The skill loads the current setup guide from the main OAuth Modem MCP. It can use
+that guide to help choose UI, configure a feedback channel, implement submission,
+and verify delivery. It needs a hosted server that exposes `install-feedback`;
+if the guide is unavailable, the agent reports that and can still help plan the UI.
+
+Install the [Cursor plugin](plugins/cursor/README.md) or
+[Claude plugin](plugins/claude/README.md) to get the native skill. A direct MCP
+connection gives the agent tools; use the same prompt to request the guide.
+For a client that supports importing skill files, use the public
+[`install-feedback` skill](skills/install-feedback/SKILL.md) or its
+[raw URL](https://raw.githubusercontent.com/modem-dev/mcp/main/skills/install-feedback/SKILL.md).
+OAuth authorization remains a separate client step.
+
 ## Example prompts
 
 - "What are customers saying about billing in the last month?"
@@ -162,3 +182,18 @@ Questions or issues: [support@modem.dev](mailto:support@modem.dev)
 ---
 
 Plugin packages for Cursor, Claude Code, and Grok Build live in [`plugins/`](plugins/).
+
+## Maintaining the feedback skill
+
+Edit `skills/install-feedback/SKILL.md`, then run:
+
+```bash
+python3 scripts/sync-feedback-skill.py
+python3 scripts/sync-feedback-skill.py --check
+```
+
+The script copies the canonical skill into each plugin so downloaded packages
+contain their own skill file. Keep detailed API and setup instructions in the
+hosted `modem_skills` guide. Check plugin manifests and test a fresh client session
+before releasing a package update; merging this repository does not itself prove
+marketplace publication.
